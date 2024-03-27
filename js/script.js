@@ -3,7 +3,8 @@ let pokemonList = ["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","C
 // Answers
 
 // Question 1
-
+document.querySelector("#host-name").innerHTML = "Asa"
+document.querySelector("#collaborator-name").innerHTML = "Erin"
 
 
 
@@ -46,7 +47,22 @@ let pokemonList = ["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","C
 
 //Question 8
 
+// got hold of element
+let colorPicker = document.querySelector("#color-picker");
+console.log(colorPicker);
 
+// add event listener
+colorPicker.addEventListener("change", changeColor);
+
+// function to run when the event happens
+function changeColor(event) {
+    // get the new color value
+    let chosenColor = event.target.value;
+    // get hold of the <body>
+    let body = document.querySelector("body");
+    // change the style
+    body.style.backgroundColor = chosenColor;
+}
 
 
 
